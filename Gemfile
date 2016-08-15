@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 ruby '2.2.3'
 
+gem 'rails-erd'
 gem 'bootstrap-sass'
 gem 'coffee-rails', '~> 4.1.0'
 gem 'decent_exposure'
@@ -27,6 +28,7 @@ group :development do
   gem 'rails_layout'
   gem 'spring-commands-rspec'
   gem 'quiet_assets'
+    gem 'web-console', '~> 2.0'
 end
 
 group :development, :test do
@@ -35,7 +37,6 @@ group :development, :test do
   gem 'faker'
   gem 'rspec-rails'
   gem 'spring'
-  gem 'web-console', '~> 2.0'
 end
 
 group :production do
