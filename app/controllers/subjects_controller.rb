@@ -1,4 +1,0 @@
-class SubjectController < ApplicationController
-
-
-end

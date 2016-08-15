@@ -6,15 +6,21 @@
         %span.icon-bar
         %span.icon-bar
         %span.icon-bar
+
       = link_to ENV['APP_NAME'], root_path, class: 'navbar-brand'
     #navbar.navbar-collapse.collapse
       %ul.nav.navbar-nav
         %li{ class: active?(students_path) }
           = link_to t('navbar.students'), students_path
-
+        %li{ class: active?(teachers_path) }
+          = link_to t('navbar.teachers'), teachers_path
+        %li.dropdown{ class: active?(subject_items_path()) }
+          = link_to '#', class: 'dropdown-toggle', 'aria-expanded' => 'false', 'aria-haspopup' => 'true', 'data-toggle' => 'dropdown', role: 'button' do
+            = t('navbar.reports')
+            %span.caret
           %ul.dropdown-menu
-            / %li{ class: active?(report_subjects_path) }
-            /   = link_to t('navbar.reports_subjects'), report_subjects_path
+            %li{ class: active?(subject_items_path) }
+              = link_to t('navbar.subjects'), subject_items_path
       %ul.nav.navbar-nav.navbar-right
         - if user_signed_in?
           %li

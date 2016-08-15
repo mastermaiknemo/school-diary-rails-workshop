@@ -11,6 +11,6 @@
     = link_to student_path(student), { method: :delete, title: t('shared.delete') } do
       %button.btn.btn-default
         = fa_icon "times"
-    = link_to student_subjects_path(student), { title: t('shared.show_subject_items') } do
+    = link_to student_subject_items_path(student), { title: t('shared.show_subject_items') } do
       %button.btn.btn-default
         = fa_icon "list"
