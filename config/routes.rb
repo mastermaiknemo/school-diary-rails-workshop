@@ -1,15 +1,15 @@
 Rails.application.routes.draw do
   
 devise_for :users
-root 'students#index' 
+root 'teachers#index' 
 
 resources :teachers do
-	get :subject_items
+	resources :subject_items
 end
 
 resources :subject_items
 
   resources :students do
-    get :subject_items
+    resources :subject_items
   end
 end
